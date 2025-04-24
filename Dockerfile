@@ -1,23 +1,21 @@
 # Use official Node.js LTS image
-FROM node:18-alpine
+FROM node:22-alpine
 
-# Set working directory
-WORKDIR /usr/src/app
+# Create app directory
+WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Install mcp-proxy globally and production dependencies
+RUN npm install -g mcp-proxy@2.10.6 \
+    && addgroup -S appgroup \
+    && adduser -S appuser -G appgroup
+
 COPY package*.json ./
-
-# Install dependencies
 RUN npm ci --omit=dev
 
-# Copy rest of the application code
 COPY . .
 
-# Expose port (default Express port, change if needed)
+USER appuser
+
 EXPOSE 3000
 
-# Set environment variables (optional)
-# ENV NODE_ENV=production
-
-# Start the server
-CMD ["npm", "start"]
+CMD ["mcp-proxy"]
