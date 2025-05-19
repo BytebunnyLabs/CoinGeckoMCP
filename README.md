@@ -226,6 +226,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **[⬆ Back to top](#-coingecko-api-server-mcp)**
 
-Made with ❤️ by [Your Organization]
+
 
 </div> 
