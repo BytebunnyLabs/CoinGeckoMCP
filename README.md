@@ -219,6 +219,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+
+[![Verified on MseeP](https://mseep.ai/badge.svg)](https://mseep.ai/app/630748b9-8b6a-4979-b03b-5eb0e42dd4f7)
+
 <div align="center">
 
 **[⬆ Back to top](#-coingecko-api-server-mcp)**
